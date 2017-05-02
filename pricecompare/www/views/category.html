@@ -1,0 +1,35 @@
+<ion-view view-title="Category">
+  <ion-content ng-controller="CategoryCtrl">
+      <div style="text-align:center">
+      <button class="pages" type="submit" ng-click="prevPage()"> Previous Page</button>
+      <button class="pages" type="submit" ng-click="nextPage()">Next Page </button>
+      </div>
+    <div ng-if="s_cell">
+      <h4 style="text-align:center">Cellphone Category</h4>
+    </div>
+    <div ng-if="s_tablets">
+      <h4 style="text-align:center">Tablets Category</h4>
+    </div>
+    <div ng-if="s_comp">
+      <h4 style="text-align:center">Computers Category</h4>
+    </div>
+    <div ng-if="s_games">
+      <h4 style="text-align:center">Games Category</h4>
+    </div>
+    <div ng-if="s_cam">
+      <h4 style="text-align:center">Camera Category</h4>
+    </div>
+    <div ng-if="s_music">
+      <h4 style="text-align:center">TV and Audio Category</h4>
+    </div>
+      <div class="wrapper">
+        <div class="box a" ng-repeat="category in categories" ng-click="selectedItem(category)">
+          <a><img ng-src="{{category.image}}" alt="" width="60px" height="60px" />
+            <p style="color: black; font-size: 13px">{{category.title}}</p>
+            <p class="cat-marg" style="color: red; font-size: 13px">{{category.price}}</p>
+            <p class="cat-marg" style="color: black; font-size: 12px">from {{category.shop}}</p>
+          </a>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>

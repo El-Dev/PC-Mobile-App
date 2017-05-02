@@ -1,0 +1,27 @@
+<ion-view view-title="Search Product">
+  <ion-content ng-controller="SearchCtrl">
+    <div class="bar bar-header item-input-inset">
+      <label class="item-input-wrapper search-bar">
+          <i class="icon ion-ios7-search placeholder-icon ion-android-search"> </i>
+          <input type="text" name="search" placeholder="Search Product" ng-model="searchText">
+        </label>
+      <button class="search" type="button" ng-click="searchProduct()">Search</button>
+    </div>
+    <div style="text-align: center; background-color: lightgray; font-size: 30px">
+      <label style="color: dodgerblue">Results for "{{searchText}}"</label>
+    </div>
+    <div class="view-item" style="margin: 15px;" ng-repeat="search in searchResults">
+      <button class="item-button text-left text-noflow" ng-click="selectedItem(search)">
+      <ul class="cat-menu">
+        <li><img ng-src="{{search.image}}" alt="" width="50px" height="50px" />
+          <a>{{search.brand}} {{search.title}}</a>
+        </li>
+      </ul>
+      <div style=" margin-left: 65px"> from <label style="color: red">{{search.price}}</label>
+      </div>
+      <div style=" margin-left: 65px; margin-top: -10px"> <label style="font-size: 12px;">{{shops}} shops</label></div>
+      </button>
+      <div class="p-line"> </div>
+    </div>
+  </ion-content>
+</ion-view>

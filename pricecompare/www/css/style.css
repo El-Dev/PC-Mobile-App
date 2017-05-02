@@ -1,0 +1,172 @@
+/* Empty. Add your own CSS if you like */
+
+.popup-buttons .button {
+  background-color: dodgerblue !important;
+  color: white !important;
+}
+
+.list-img {
+  float: right;
+}
+
+.cat-menu {
+  border: 50px;
+  ;
+  height: 40px;
+  margin-left: 10px;
+}
+
+.bar .title {
+  font-size: 19px !important;
+  color: white !important;
+}
+
+.nav-bar-tabs-top .bar {
+  background-color: dodgerblue;
+}
+
+.bar-stable .button.button-clear {
+  color: white !important;
+}
+
+.tab-nav {
+  background-color: dodgerblue !important;
+}
+
+.tab-nav a:hover {
+  color: white;
+}
+
+.bar-header.has-tabs-top {
+  background-color: dodgerblue !important;
+}
+
+.search {
+  color: white;
+  background-color: dodgerblue;
+  border-radius: 4px;
+  width: 30%;
+  margin-right: -5px;
+  font-size: 16px !important;
+}
+
+.search-bar {
+  font-size: large !important;
+  margin: -2px;
+}
+
+.search-bar input {
+  color: dodgerblue !important;
+  font-family: 'Arial' !important;
+}
+
+div.p-line {
+  width: 100%;
+  height: 1px;
+  background: lightgray !important;
+}
+
+button.text-noflow {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.arrow-m {
+  margin-left: -10px;
+}
+
+.view-item:focus {
+  background-color: dodgerblue;
+}
+
+.item-button {
+  background-color: white;
+  border: 0px;
+  align-content: flex-end;
+}
+
+.center {
+  text-align: center !important;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.compare-title {
+  background-color: lightgray !important;
+  height: 30px !important;
+}
+
+.add-fav {
+  background-color: dodgerblue;
+  border: 0px;
+  color: white;
+  margin-left: 85px;
+  width: 120px;
+  font-size: 12px;
+  height: 22px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.s-item-view {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  color: white !important;
+  margin-top: 0px;
+  padding: 0px;
+}
+
+div.s-item-view button {
+  border: 0px !important;
+  background-color: dodgerblue;
+  width: 100% !important;
+}
+
+div.s-item-view button a {
+  font-size: 100%;
+  color: white;
+  font-size: 20px;
+}
+
+div.s-item-view :active {
+  background-color: lightblue !important;
+}
+
+div.s-item-view :focus {
+  background-color: lightblue !important;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-gap: 1%;
+}
+
+.box {
+  color: dodgerblue;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 150%;
+}
+
+.wrapper :active {
+  background-color: lightblue;
+}
+
+.cat-marg {
+  margin-top: -10px;
+}
+
+.menu-item :active {
+  background-color: dodgerblue !important;
+}
+
+.pages {
+  margin: 5px;
+  border-radius: 5px;
+  border: 0px;
+  color: white;
+  background-color: dodgerblue;
+  font-size: 15px;
+}

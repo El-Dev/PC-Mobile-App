@@ -1,0 +1,97 @@
+<ion-view view-title="Price Compare">
+  <ion-content>
+    <div class="bar bar-header item-input-inset" ng-controller="HomeCtrl">
+      <label class="item-input-wrapper search-bar">
+          <i class="icon ion-ios7-search placeholder-icon ion-android-search"> </i>
+          <input type="text" name="search" autofocus="autofocus" placeholder="Search Product" ng-model="searchText">
+        </label>
+      <button class="search" type="submit" ng-click="searchProduct(searchText)">Search</button>
+    </div>
+    <div style="margin-top: -44px">
+      <ion-tabs class="tabs-dark tabs-icon-top">
+        <ion-tab title="Scan Barcode" icon-on="ion-ios-barcode" icon-off="ion-ios-barcode" ng-click="scanner()">
+        </ion-tab>
+        <ion-tab title="Browse" icon-on="ion-ios-eye" icon-off="ion-ios-eye" ng-click="browser()">
+        </ion-tab>
+        <ion-tab title="Favourite" icon-on="ion-android-favorite" icon-off="ion-android-favorite" ng-click="showFavourites()">
+        </ion-tab>
+      </ion-tabs>
+    </div>
+    <br><br><br><br><br>
+    <div ng-if="category">
+      <h4 style="text-align: center;">What's hot</h4>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <a style="color: purple" class="button button-icon icon ion-android-phone-portrait" ng-click="selCell()">
+              <p style="color: black; font-size: 15px">Cellphones</p>
+            </a>
+          </div>
+          <div class="col-40">
+            <a style="color: lightcoral" class="button button-icon icon ion-ipad" ng-click="selTablet()">
+              <p style="color: black; font-size: 15px">Tablets</p>
+            </a>
+          </div>
+          <div class="col-20">
+            <a style="color: deepskyblue" class="button button-icon icon ion-laptop" ng-click="selComp()">
+              <p style="color: black; font-size: 15px">Computers</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <a style="color: lawngreen" class="button button-icon icon ion-camera" ng-click="selCamera()">
+              <p style="color: black; font-size: 15px">Cameras</p>
+            </a>
+          </div>
+          <div class="col-40">
+            <a style="color: orangered" class="button button-icon icon ion-ios-book" ng-click="selCat()">
+              <p style="color: black; font-size: 15px">Catelogue</p>
+            </a>
+          </div>
+          <div class="col-20">
+            <a style="color: blue" class="button button-icon icon ion-ios-game-controller-b" ng-click="selGame()">
+              <p style="color: black; font-size: 15px">Games</p>
+            </a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <a style="color: mediumpurple" class="button button-icon icon ion-ios-musical-notes" ng-click="selMusic()">
+              <p style="color: black; font-size: 15px">Music</p>
+            </a>
+          </div>
+          <div class="col-40">
+            <a style="color: springgreen" class="button button-icon icon ion-ios-home" ng-click="selInsurance()">
+              <p style="color: black; font-size: 15px">Insurance</p>
+            </a>
+          </div>
+          <div class="col-20">
+            <a style="color: forestgreen" class="button button-icon icon ion-plane" ng-click="selFlight()">
+              <p style="color: black; font-size: 15px">Flights</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Display Favourites-->
+    <div ng-if="favourites">
+      <h4 style="text-align: center;">My Favourites</h4>
+      <div class="wrapper">
+        <div class="box a" ng-repeat="favour in favours" ng-click="selectedFavour(favour)">
+          <a><img ng-src="{{favour.image}}" alt="" width="60px" height="60px" />
+            <p style="color: black; font-size: 13px">{{favour.title}}</p>
+            <p class="cat-marg" style="color: red; font-size: 13px">{{favour.price}}</p>
+            <p class="cat-marg" style="color: black; font-size: 12px">from {{favour.shop}}</p>
+          </a>
+        </div>
+      </div>
+    </div>
+<!--Display Scanning product QR Code-->
+    <div ng-if="scanning">
+      <h4 style="text-align: center;">Scanning Code.</h4>
+    </div>
+  </ion-content>
+</ion-view>

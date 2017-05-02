@@ -1,0 +1,52 @@
+<ion-view view-title="Compare">
+  <ion-content ng-controller="CompareCtrl">
+    <div class="compare-title">
+      <p class="center" style="font-size: 15px">{{title}}
+      </p>
+    </div>
+    <div class="view-item" style="margin: 15px;">
+      <ul class="cat-menu">
+        <li><img ng-src="{{image}}" alt="" width="70px" height="70px" />
+          <label style="color: red;"><label>{{price}}</label>
+          <p style="color:black; font-size: 12px">from {{shop}}</p>
+          </label>
+
+        </li>
+      </ul>
+      <button class="add-fav" ng-click="addToFavorite()"><label class="ion-android-favorite"> </label>Add to Favourites</button>
+
+    </div>
+    <div class="row s-item-view">
+      <button class="bc" ng-click="offers()"><a class="ion-pricetags"><br></a>Offers
+        </button>
+      <button class="bc" ng-click="details()"><a class="ion-document-text"><br></a>Details
+        </button>
+      <button class="bc" ng-click="reviews()"><a class="ion-ios-star"><br></a>Reviews
+        </button>
+      <button class="bc" ng-click="share()" ><a class="ion-android-share-alt"><br></a>Share
+        </button>
+    </div>
+
+    <div ng-if="s_offer" style="overflow-y:hidden; height:400px;">
+      <div class="view-item" style="margin: 15px;" ng-repeat="website in websites">
+        <button class="item-button text-left text-noflow" ng-click="selectedWebsite(website)">
+      <ul class="cat-menu">
+        <li><img ng-src="{{website.image}}" alt="" width="60px" height="60px" />
+          <a>{{website.title}}</a>
+        </li>
+      </ul>
+      <div style=" margin-left: 73px"> <label style="color: red">{{website.price}}
+        <p style="color: black; font-size: 12px">from {{website.shop}}</p></label></div>
+      <div style=" margin-left: 73px; margin-top: -10px"> <label style="font-size: 12px;"> Reviews (0)</label></div>
+      </button>
+        <div class="p-line"> </div>
+      </div>
+    </div>
+
+    <div ng-if="s_details" style="overflow-y:hidden; height:400px;">
+    </div>
+    <div ng-if="s_reviews">
+    </div>
+    </div>
+  </ion-content>
+</ion-view>
